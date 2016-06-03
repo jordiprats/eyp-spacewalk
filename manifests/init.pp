@@ -11,6 +11,7 @@ class spacewalk(
                             $service_enable        = true,
                           ) inherits spacewalk::params{
 
+  class { '::spacewalk::master::db': } ->
   class { '::spacewalk::install': } ->
   class { '::spacewalk::config': } ~>
   class { '::spacewalk::service': } ->

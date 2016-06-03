@@ -1,13 +1,16 @@
 class spacewalk::params {
 
+  $reponame_spacewalk='spacewalk-repo'
+
   case $::osfamily
   {
     'redhat':
     {
       case $::operatingsystemrelease
       {
-        /^[5-7].*$/:
+        /^6.*$/:
         {
+          $repo_spacewalk= 'http://yum.spacewalkproject.org/latest/RHEL/6/x86_64/spacewalk-repo-2.4-3.el6.noarch.rpm'
         }
         default: { fail("Unsupported RHEL/CentOS version! - ${::operatingsystemrelease}")  }
       }

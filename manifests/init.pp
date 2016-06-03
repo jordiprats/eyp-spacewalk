@@ -2,6 +2,9 @@
 #
 # === spacewalk documentation
 #
+
+# https://www.lisenet.com/2015/setup-spacewalk-2-4-on-centos-6/
+
 class spacewalk(
                             $manage_package        = true,
                             $package_ensure        = 'installed',
@@ -11,7 +14,10 @@ class spacewalk(
                             $service_enable        = true,
                           ) inherits spacewalk::params{
 
-  class { '::spacewalk::master::db': } ->
+  include ::epel
+
+  Class['::epel'] ->
+  class { '::spacewalk::master::postgres': } ->
   class { '::spacewalk::install': } ->
   class { '::spacewalk::config': } ~>
   class { '::spacewalk::service': } ->

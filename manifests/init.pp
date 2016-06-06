@@ -12,11 +12,16 @@ class spacewalk(
                             $manage_docker_service = true,
                             $service_ensure        = 'running',
                             $service_enable        = true,
+                            $manage_db             = true,
+                            $db_user               = 'spaceuser',
+                            $db_password           = 'spacepassword',
+                            $db_name               = 'spacedb',
                           ) inherits spacewalk::params{
 
   include ::epel
 
   Class['::epel'] ->
+  class { '::spacewalk::repo::install': } ->
   class { '::spacewalk::master::postgres': } ->
   class { '::spacewalk::install': } ->
   class { '::spacewalk::config': } ~>

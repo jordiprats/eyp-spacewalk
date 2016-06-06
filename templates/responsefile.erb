@@ -1,0 +1,16 @@
+admin-email = <%= scope.lookupvar('spacewalk::admin_email') %>
+ssl-set-org = <%= scope.lookupvar('spacewalk::sslcert_org') %>
+ssl-set-org-unit = <%= scope.lookupvar('spacewalk::sslcert_orgunit') %>
+ssl-set-city = <%= scope.lookupvar('spacewalk::sslcert_city') %>
+ssl-set-state = <%= scope.lookupvar('spacewalk::sslcert_state') %>
+ssl-set-country = <%= scope.lookupvar('spacewalk::sslcert_country') %>
+ssl-password = <%= scope.lookupvar('spacewalk::ssl_password') %>
+ssl-set-email = <%= scope.lookupvar('spacewalk::sslcert_email') %>
+ssl-config-sslvhost = <%= scope.function_bool2yn([scope.lookupvar('spacewalk::ssl_vhost')]) %>
+db-backend=postgresql
+db-user=<%= scope.lookupvar('spacewalk::db_user') %>
+db-password=<%= scope.lookupvar('spacewalk::db_password') %>
+db-name=<%= scope.lookupvar('spacewalk::db_name') %>
+db-host=127.0.0.1
+db-port=5432
+enable-tftp=<%= scope.function_bool2yn([scope.lookupvar('spacewalk::enable_tftp')]) %>

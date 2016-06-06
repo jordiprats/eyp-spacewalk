@@ -2,7 +2,7 @@ class spacewalk::params {
 
   $reponame_spacewalk='spacewalk-repo'
   $db_postgres_setup='spacewalk-setup-postgresql'
-  $spacewalk_setup='spacewalk-setup'
+  $spacewalk_setup='spacewalk-postgresql'
 
   case $::osfamily
   {

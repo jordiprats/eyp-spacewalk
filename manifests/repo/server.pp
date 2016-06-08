@@ -1,4 +1,4 @@
-class spacewalk::repo::install inherits spacewalk {
+class spacewalk::repo::server inherits spacewalk {
 
   if($spacewalk::manage_package)
   {

@@ -2,7 +2,7 @@
   "name": "eyp-spacewalk",
   "version": "0.1.0",
   "author": "eyp",
-  "summary": null,
+  "summary": "spacewalk server setup",
   "license": "Apache-2.0",
   "source": "https://github.com/NTTCom-MS/eyp-spacewalk",
   "project_page": null,
@@ -33,10 +33,6 @@
     {
       "operatingsystem": "OracleLinux",
       "operatingsystemrelease": [ "5", "6", "7" ]
-    },
-    {
-      "operatingsystem": "Ubuntu",
-      "operatingsystemrelease": [ "14.04" ]
     }
   ],
   "requirements": [

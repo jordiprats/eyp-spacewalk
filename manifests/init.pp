@@ -33,7 +33,7 @@ class spacewalk(
   include ::jpackage
 
   Class['::epel'] ->
-  class { '::spacewalk::repo::install': } ->
+  class { '::spacewalk::repo::server': } ->
   class { '::spacewalk::master::postgres': } ->
   class { '::spacewalk::install': } ->
   class { '::spacewalk::config': } ~>

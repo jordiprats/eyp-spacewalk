@@ -17,22 +17,17 @@
 
 ## Overview
 
-A one-maybe-two sentence summary of what the module does/what problem it solves.
-This is your 30 second elevator pitch for your module. Consider including
-OS/Puppet version it works with.
+spacewalk setup
 
 ## Module Description
 
-spacewalk using postgres
+spacewalk installation using postgres
 
 ## Setup
 
 ### What spacewalk affects
 
-* A list of files, packages, services, or operations that the module will alter,
-  impact, or execute on the system it's installed on.
-* This is a great place to stick any warnings.
-* Can be in list or paragraph form.
+* manages spacewalk packages
 
 ### Setup Requirements
 
@@ -40,11 +35,9 @@ This module requires pluginsync enabled
 
 ### Beginning with spacewalk
 
-The very basic steps needed for a user to get the module up and running.
-
-If your most recent release breaks compatibility or requires particular steps
-for upgrading, you may wish to include an additional section here: Upgrading
-(For an example, see http://forge.puppetlabs.com/puppetlabs/firewall).
+```puppet
+class { 'spacewalk': }
+```
 
 ## Usage
 
@@ -60,7 +53,7 @@ with things. (We are working on automating this section!)
 
 ## Limitations
 
-This is where you list OS compatibility, version compatibility, etc.
+Tested on CentOS 6
 
 ## Development
 
